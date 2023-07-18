@@ -2,8 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
@@ -11,14 +11,13 @@ generator client {
   provider = "prisma-client-js"
 }
 
-
 model Post {
-    id        String   @id @default(cuid())
-    createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
 
-    content String @db.VarChar(255)
+  content String @db.VarChar(255)
 
-    authorId String
+  authorId String
 
-    @@index([authorId])
+  @@index([authorId])
 }
