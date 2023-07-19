@@ -4,15 +4,11 @@ import Image from "next/image";
 
 import { api } from "~/utils/api";
 
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
 import { LoadingPage, LoadingSpinner } from "~/components/Loading";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { PageLayout } from "~/components/layout";
 import { PostView } from "~/components/PostView";
-
-dayjs.extend(relativeTime);
 
 const CreatePostWizard = () => {
   const { user } = useUser();
