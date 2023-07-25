@@ -1,28 +1,32 @@
-# Create T3 App
+# Emoter
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## Description
 
-## What's next? How do I make an app with this?
+Emoter is a fun and expressive Twitter clone with a twist. Users communicate solely through emojis instead of traditional text-based tweets, making it a unique and engaging social media experience. Emoter allows users to post their emotions, thoughts, and reactions using many emojis, fostering a lighthearted and visually appealing platform for social interactions.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Key Features
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- **Emojified Posts**: Users can compose posts using emojis to convey their feelings and opinions or share memorable moments.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- **Profile Page**: Each user has a dedicated profile page displaying all their emoji posts, providing a snapshot of their emotional journey.
 
-## Learn More
+- **Individual Post** View: Users can view each post individually in a detailed view, enabling easy sharing and interaction.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- **Real-time** Post Time: Emoter utilizes Dayjs to display post times in a user-friendly and intuitive format, keeping the platform up-to-date.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## Technologies Used
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- Frontend Framework: React.js
+- Backend Framework: Next.js (API routes)
+- Database: Postgres (managed by Prisma ORM)
+- CSS Framework: Tailwind CSS
+- Date/Time Formatting: Dayjs
+- Type-Safe API: tRPC
 
-## How do I deploy this?
+## Outcome
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Emoter leverages the powerful combination of Prisma, Next.js, Tailwind CSS, and Dayjs to provide users with a modern and dynamic social media platform centered around emojis. Whether you're sharing a moment of joy, expressing excitement, or having fun with emoticons, Emoter provides a refreshing and emotive twist on the traditional Twitter experience.
+
+## Live Demo
+
+See the live demo of the project [here](https://emoter-git-main-farzanhosseini.vercel.app/).
