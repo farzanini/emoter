@@ -1,32 +1,43 @@
 # Emoter
 
-## Description
+Emoter is a small social app for sharing emoji-only posts and browsing them in a feed.
 
-Emoter is a fun and expressive Twitter clone with a twist. Users communicate solely through emojis instead of traditional text-based tweets, making it a unique and engaging social media experience. Emoter allows users to post their emotions, thoughts, and reactions using many emojis, fostering a lighthearted and visually appealing platform for social interactions.
+## Features
 
-## Key Features
+- Signed-in users can publish posts containing emoji, with a per-user rate limit.
+- Browse recent posts and view posts by author on profile pages.
+- Open individual post pages and see relative posting times.
+- Load user and post data through type-safe tRPC procedures.
 
-- **Emojified Posts**: Users can compose posts using emojis to convey their feelings and opinions or share memorable moments.
+## Tech stack
 
-- **Profile Page**: Each user has a dedicated profile page displaying all their emoji posts, providing a snapshot of their emotional journey.
+- Next.js 13, React 18, and TypeScript
+- Clerk authentication
+- tRPC, TanStack Query, and Zod
+- Prisma with MySQL
+- Tailwind CSS
+- Upstash Redis for rate limiting
+- Day.js for relative timestamps
 
-- **Individual Post** View: Users can view each post individually in a detailed view, enabling easy sharing and interaction.
+## Getting started
 
-- **Real-time** Post Time: Emoter utilizes Dayjs to display post times in a user-friendly and intuitive format, keeping the platform up-to-date.
+Requirements: Node.js/npm, a MySQL database, Clerk credentials, and Upstash Redis credentials. Configure the environment required by the integrations before starting the app; `DATABASE_URL` is validated in `src/env.mjs`.
 
-## Technologies Used
+```sh
+npm install
+npm run dev
+```
 
-- Frontend Framework: React.js
-- Backend Framework: Next.js (API routes)
-- Database: Postgres (managed by Prisma ORM)
-- CSS Framework: Tailwind CSS
-- Date/Time Formatting: Dayjs
-- Type-Safe API: tRPC
+The development server is started by Next.js. Available project scripts include `npm run build`, `npm run start`, `npm run lint`, and `npm run typecheck`.
 
-## Outcome
+## Project structure
 
-Emoter leverages the powerful combination of Prisma, Next.js, Tailwind CSS, and Dayjs to provide users with a modern and dynamic social media platform centered around emojis. Whether you're sharing a moment of joy, expressing excitement, or having fun with emoticons, Emoter provides a refreshing and emotive twist on the traditional Twitter experience.
-
-## Live Demo
-
-See the live demo of the project [here](https://emoter-git-main-farzanhosseini.vercel.app/).
+```text
+src/
+  components/       Shared page and post components
+  pages/            Feed, profile, post, and API routes
+  server/api/       tRPC routers and request setup
+  styles/           Global styles
+prisma/             Prisma schema
+public/             Static assets
+```
